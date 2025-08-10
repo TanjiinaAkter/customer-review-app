@@ -1,9 +1,9 @@
-import React from "react";
 import image from "../../../assets/review.png";
 import { FaStar } from "react-icons/fa";
 import revImg from "../../../assets/pexels-anete-lusina-6331236.jpg";
 const ReviewCard = ({ rev }) => {
   const { id, rating, shopName, reviewText, dateTime } = rev;
+
   return (
     <div
       style={{

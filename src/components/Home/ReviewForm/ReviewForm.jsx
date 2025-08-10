@@ -42,6 +42,7 @@ const ReviewForm = () => {
     setReviews((prev) => [...prev, newReview]);
     clearForm();
   };
+  
   return (
     <div className="mt-8">
       <div className="hero bg-base-200 ">

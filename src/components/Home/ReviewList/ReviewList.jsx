@@ -4,6 +4,7 @@ import React from "react";
 import ReviewCard from "../ReviewCard/ReviewCard";
 const ReviewList = ({ reviews }) => {
   console.log(reviews);
+  
   return (
     <div>
       <div className="mb-5 mt-16">
