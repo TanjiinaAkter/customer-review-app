@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import ReviewList from "../ReviewList/ReviewList";
+
 
 const ReviewForm = () => {
   // Store input values
@@ -42,7 +44,7 @@ const ReviewForm = () => {
   };
   return (
     <div className="mt-8">
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero bg-base-200 ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card   bg-base-100 mx-auto w-[90%]  md:w-[90%] lg:w-[50%] shrink-0 shadow-2xl">
             <div className="card-body">
@@ -119,6 +121,7 @@ const ReviewForm = () => {
           </div>
         </div>
       </div>
+      <ReviewList reviews={reviews}></ReviewList>
     </div>
   );
 };

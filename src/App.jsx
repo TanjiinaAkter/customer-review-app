@@ -8,7 +8,7 @@ function App() {
       <Banner></Banner>
       <div>
         <ReviewForm></ReviewForm>
-        <ReviewList></ReviewList>
+        {/* <ReviewList></ReviewList> */}
       </div>
     </>
   );
