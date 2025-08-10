@@ -4,13 +4,13 @@ import { FaStar } from "react-icons/fa";
 const ReviewForm = () => {
   const [rating, setRating] = useState(0);
   return (
-    <div className="my-8">
+    <div className="mt-8">
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card   bg-base-100 mx-auto w-[90%]  md:w-[90%] lg:w-[50%] shrink-0 shadow-2xl">
             <div className="card-body">
               <form className="bg-white rounded-md p-4">
-                <h1 className="text-4xl md:text-5xl text-center text-[#4a5368]  mb-5 font-bold">
+                <h1 className="text-4xl md:text-[40px] text-center text-[#4a5368]  mb-5 font-bold">
                   Review Form
                 </h1>
                 {/*Star rating */}
@@ -45,7 +45,7 @@ const ReviewForm = () => {
                 {/*Shop textarea */}
                 <div className="flex flex-col my-3 md:flex-col">
                   <label className=" md:w-[26%]  py-2 text-[#4a5368] text-[20px] md:text-[1.2rem] font-semibold">
-                    Shop Review Text :
+                    Shop Review  :
                   </label>
                   <textarea
                     name=""
@@ -53,10 +53,16 @@ const ReviewForm = () => {
                     rows={4}
                     cols={10}
                     className="input px-2 rounded-sm placeholder-[#697183] placeholder:text-sm placeholder:font-medium py-2 text-lg bg-transparent border focus:outline-none hover:outline-0 border-gray-300 text-[#4a5368] w-full"
-                    placeholder="Please type Shop name"></textarea>
+                    placeholder="Please type your review"></textarea>
                 </div>
                 {/*date */}
-                <input type="datetime-local" name="" id="" />
+                <div>
+                  <label className=" md:w-[26%]  py-2 text-[#4a5368] text-[20px] md:text-[1.2rem] font-semibold">
+                    {" "}
+                  Select Date & Time :
+                  </label>
+                  <input type="datetime-local" name="" id="" />
+                </div>
                 <button
                   type="submit"
                   className="p-3 font-semibold hover:scale-95 hover:bg-red-600 ease-in hover:transition-transform duration-300 text-lg w-full bg-[#4a5368] text-white mt-4">
