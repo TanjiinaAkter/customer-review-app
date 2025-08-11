@@ -49,9 +49,10 @@ const ReviewForm = () => {
           <div className="card   bg-base-100 mx-auto w-[90%]  md:w-[90%] lg:w-[50%] shrink-0 shadow-2xl">
             <div className="card-body">
               <form onSubmit={handleSubmit} className="bg-white rounded-md p-4">
-                <h1 className="text-4xl md:text-[40px] text-center text-[#4a5368]  mb-5 font-bold">
+                <h1 className="text-4xl md:text-[40px] text-center text-[#6e7c9d] mb-5 font-bold">
                   Review Form
                 </h1>
+                <hr className="h-[3px] w-[12%] mb-5 bg-[#6e7c9d] mx-auto" />
                 {/*Star rating */}
                 <div className="flex flex-col md:flex-row justify-between shadow-md p-2">
                   <label className="text-[#4a5368] text-[20px] mb-2 md:mb-0 md:text-[1.2rem] font-semibold">

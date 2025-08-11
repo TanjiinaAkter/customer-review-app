@@ -8,11 +8,11 @@ const ReviewList = ({ reviews, setReviews }) => {
   return (
     <div>
       <div className="mb-5 mt-16">
-        <h1 className="text-4xl md:text-[40px] text-center text-[#4a5368]  mb-5 font-bold">
+        <h1 className="text-4xl md:text-[40px] text-center text-[#6e7c9d] mb-2  font-bold">
           All Reviews
         </h1>
-
-        <p className="text-[#4f586d] text-center text-[20px] mb-2 md:mb-0 md:text-[1.2rem] font-medium">
+        <hr className="h-[3px] w-[5%] mb-5 bg-[#6e7c9d] mx-auto" />
+        <p className="text-[#8e9bba] text-center text-[20px] mb-2 md:mb-0 md:text-[1.2rem] font-medium">
           Read genuine reviews from shoppers to guide your next online purchase.
         </p>
       </div>
