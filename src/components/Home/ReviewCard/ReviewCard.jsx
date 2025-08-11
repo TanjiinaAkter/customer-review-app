@@ -1,7 +1,8 @@
 import image from "../../../assets/review.png";
 import { FaStar } from "react-icons/fa";
-import revImg from "../../../assets/pexels-anete-lusina-6331236.jpg";
+import revImg from "../../../assets/revBg.jpg";
 import { useState } from "react";
+import { IoStorefrontSharp } from "react-icons/io5";
 const ReviewCard = ({ rev, setReviews }) => {
   const { id, rating, shopName, reviewText, dateTime } = rev;
   const [editRating, setEditRating] = useState(rating);
@@ -41,33 +42,36 @@ const ReviewCard = ({ rev, setReviews }) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="card rounded-lg text-white relative z-40 shadow-lg ">
-      <div className=" absolute top-[-9%] left-[40%] z-40">
+      className="card  hover:scale-105 hover:transition-transform duration-700 hover:ease-in-out rounded-lg text-white relative z-40 shadow-lg ">
+      <div className=" absolute top-[-9%] left-[38%] md:left-[42%] z-40">
         <img className="  h-[4rem] w-[4rem]" src={image} alt="" />
       </div>
 
-      <div className="p-4 space-y-2 relative z-40">
-        <h1 className="text-3xl pt-6 font-semibold capitalize text-yellow-300">
-          {shopName}
-        </h1>
-        <p className="text-lg font-semibold capitalize flex flex-row">
-          ratings :
-          {[1, 2, 3, 4, 5].map((star) => (
-            <FaStar
-              key={star}
-              className={`${
-                star <= rating ? "text-yellow-400" : "text-gray-400"
-              }`}></FaStar>
-          ))}
-        </p>
-        <p>{reviewText}</p>
-        <h2>{new Date(dateTime).toLocaleString()}</h2>
+      <div className="p-4 space-y-7 relative z-40">
+        <div className="flex justify-between items-center pt-8">
+          <h1 className="text-lg lg:text-[28px] flex justify-start items-center gap-2 font-semibold capitalize text-white">
+            <IoStorefrontSharp className="text-lg md:text-[20px]" />
+            {shopName}
+          </h1>
+          <p className="text-lg font-semibold capitalize flex flex-row">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <FaStar
+                key={star}
+                size={20}
+                className={` ${
+                  star <= rating ? "text-[#FFD700] " : "text-[#CCCCCC]"
+                }`}></FaStar>
+            ))}
+          </p>
+        </div>
+        <p className="text-white text-[17px] ">{reviewText}</p>
+        <h2 className="text-gray-300">{new Date(dateTime).toLocaleString()}</h2>
         {/* <h2>{new Date(dateTime).toLocaleString()}</h2> */}
       </div>
       <div className="z-40 pl-2 mb-4 flex justify-start gap-5 relative">
         <button
           onClick={() => document.getElementById(`my_modal_${id}`).showModal()}
-          className="px-7 py-[4px] text-gray-800 hover:bg-gray-600 bg-white text-lg font-semibold rounded-sm">
+          className="px-7 py-[4px] text-gray-800 hover:bg-gray-600 bg-blue-400 text-lg font-semibold rounded-sm">
           Edit
         </button>
         <dialog id={`my_modal_${id}`} className="modal w-[30%] p-4">
@@ -91,7 +95,7 @@ const ReviewCard = ({ rev, setReviews }) => {
                         onClick={() => setEditRating(star)}
                         className={`cursor-pointer ${
                           editRating >= star
-                            ? "text-yellow-400"
+                            ? "text-[#FFD700]"
                             : "text-gray-400"
                         }`}
                       />
@@ -148,11 +152,11 @@ const ReviewCard = ({ rev, setReviews }) => {
         </dialog>
         <button
           onClick={handleDelete}
-          className="px-5 py-[4px] bg-red-600 hover:bg-gray-600 text-white text-lg font-semibold rounded-sm">
+          className="px-5 py-[4px] bg-red-600 hover:bg-[#a33125] text-white text-lg font-semibold rounded-sm">
           Delete
         </button>
       </div>
-      <div className="absolute rounded-lg shadow-2xl inset-0 z-10 bg-[#15273e] opacity-90"></div>
+      <div className="absolute rounded-lg shadow-2xl inset-0 z-10 bg-[#030224de]  opacity-90"></div>
     </div>
   );
 };
