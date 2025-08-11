@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import ReviewList from "../ReviewList/ReviewList";
 
-
 const ReviewForm = () => {
   // Store input values
   const [rating, setRating] = useState(0);
@@ -42,7 +41,7 @@ const ReviewForm = () => {
     setReviews((prev) => [...prev, newReview]);
     clearForm();
   };
-  
+
   return (
     <div className="mt-8">
       <div className="hero bg-base-200 ">
@@ -122,7 +121,7 @@ const ReviewForm = () => {
           </div>
         </div>
       </div>
-      <ReviewList reviews={reviews}></ReviewList>
+      <ReviewList reviews={reviews} setReviews={setReviews}></ReviewList>
     </div>
   );
 };

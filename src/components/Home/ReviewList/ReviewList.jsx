@@ -2,9 +2,9 @@ import React from "react";
 // import image from "../../../assets/review.png";
 // import revImg from "../../../assets/pexels-anete-lusina-6331236.jpg";
 import ReviewCard from "../ReviewCard/ReviewCard";
-const ReviewList = ({ reviews }) => {
+const ReviewList = ({ reviews, setReviews }) => {
   console.log(reviews);
-  
+
   return (
     <div>
       <div className="mb-5 mt-16">
@@ -18,7 +18,10 @@ const ReviewList = ({ reviews }) => {
       </div>
       <div className="p-[1.3rem] md:p-24 relative grid-container  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {reviews.map((rev) => (
-          <ReviewCard key={rev.id} rev={rev}></ReviewCard>
+          <ReviewCard
+            key={rev.id}
+            rev={rev}
+            setReviews={setReviews}></ReviewCard>
         ))}
       </div>
     </div>
